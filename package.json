@@ -1,0 +1,11 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "Solutions for the Advent Of Code puzzles (adventofcode.com)",
+  "author": "Luzanne Weda",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^7.15.0"
+  }
+}
