@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  const input = await readFile('2020/day5.txt')
+  const input = await readFile('2020/day5/input.txt')
 
   const seatIds = []
   for (const boardingpass of input) {

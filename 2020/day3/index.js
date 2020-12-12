@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  const input = await readFile('2020/day3.txt')
+  const input = await readFile('2020/day3/input.txt')
 
   const test1result = walkinforest(input, 3, 1)
   console.log('Puzzle 1: ' + test1result)

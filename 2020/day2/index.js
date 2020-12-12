@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  const input = await readFile('2020/day2.txt')
+  const input = await readFile('2020/day2/input.txt')
 
   /**
    * Input: 8-9 x: xxxxxxxrk

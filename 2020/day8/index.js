@@ -1,8 +1,8 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 const corruptedInstructions = ['nop', 'jmp']
 async function processLineByLine() {
-  const input = await readFile('2020/day8.txt')
+  const input = await readFile('2020/day8/input.txt')
 
   const instructions = []
   for (const instruction of input) {

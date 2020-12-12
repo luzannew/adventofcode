@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  let input = await readFile('2020/day10.txt')
+  let input = await readFile('2020/day10/input.txt')
   input = input
     .map(Number)
     .sort((a, b) => a - b)

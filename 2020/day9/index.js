@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  let input = await readFile('2020/day9.txt')
+  let input = await readFile('2020/day9/input.txt')
   input = input.map(Number)
 
   puzzle1(input)

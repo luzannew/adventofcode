@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  const input = await readFile('2020/day7.txt')
+  const input = await readFile('2020/day7/input.txt')
 
   // Convert the input to a map of bags, each entry contains an array with name + amount of bags it can hold
   const bags = new Map()

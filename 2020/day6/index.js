@@ -1,7 +1,7 @@
-import { readFile } from "../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
-  const input = await readFile('2020/day6.txt')
+  const input = await readFile('2020/day6/input.txt')
 
   let groupIndex = 0;
   const groups = []

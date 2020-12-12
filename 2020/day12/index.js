@@ -1,4 +1,4 @@
-import { readFile } from "../../aoc.js";
+import { readFile } from '../../aoc.js'
 
 async function processLineByLine() {
   let input = await readFile('2020/day12/input.txt')
