@@ -13,8 +13,12 @@ async function processLineByLine() {
   const player1 = input.slice(1, split).map(Number)
   const player2 = input.slice(split + 2, input.length).map(Number)
 
+  console.time('Puzzle 1 time')
   puzzle1([...player1], [...player2])
+  console.timeEnd('Puzzle 1 time')
+  console.time('Puzzle 2 time')
   puzzle2([...player1], [...player2])
+  console.timeEnd('Puzzle 2 time')
 }
 
 /**
@@ -45,17 +49,15 @@ function playgame(simple, game, player1, player2) {
         cache.add(key)
       }
     }
-    const [player1card] = player1.splice(0, 1)
-    const [player2card] = player2.splice(0, 1)
+    const player1card = player1.shift()
+    const player2card = player2.shift()
     debug(`Player 1 plays: ${player1card}`)
     debug(`Player 2 plays: ${player2card}`)
 
-    let player1wins = false
+    let player1wins = player1card > player2card
     if (simple === false && player1.length >= player1card && player2.length >= player2card) {
       debug('Playing a sub-game to determine the winner...')
-      player1wins = playgame(simple, game + 1, [...player1.slice(0, player1card)], [...player2.slice(0, player2card)]).winner === 1
-    } else {
-      player1wins = player1card > player2card
+      player1wins = playgame(simple, game + 1, player1.slice(0, player1card), player2.slice(0, player2card)).winner === 1
     }
 
     if (player1wins) {
@@ -102,7 +104,7 @@ function puzzle2(player1, player2) {
   const score = result.cards.reverse().reduce((acc, curr, index) => {
     acc += curr * (index + 1)
     return acc
-  })
+  }, 0)
   console.log(`Puzzle 2: ${score}`)
 }
 
