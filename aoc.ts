@@ -1,7 +1,7 @@
 import fs from 'fs';
 import readline from 'readline';
 
-export async function readFile(filename) {
+export async function readFile(filename: string) {
   const fileStream = fs.createReadStream(filename);
 
   const rl = readline.createInterface({
@@ -9,7 +9,7 @@ export async function readFile(filename) {
     crlfDelay: Infinity
   });
 
-  let input = []
+  let input: string[] = []
 
   for await (const line of rl) {
     input.push(line)
