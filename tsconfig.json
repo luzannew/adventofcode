@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+   
+    "lib": [
+      "ESNext",
+    ],
+    "outDir": "lib",
+    "target": "ES2021",
+   
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "paths": {},
+   
+    "sourceMap": true,
+    "sourceRoot": "/",
+   
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+   
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["./**/*.ts"],
+  "exclude": [
+    "node_modules/**/*"
+  ]
+}
